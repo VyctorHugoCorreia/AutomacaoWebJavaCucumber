@@ -1,4 +1,5 @@
 package Steps;
+
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Quando;
 import org.junit.*;
@@ -19,7 +20,7 @@ public class EnviarFormularioSampleAppStep extends BaseTest {
 
 	@Quando("clico em Next do formulario enter Vehicle Data")
 	public void ClicoEmNextDoFormularioEnterVehicleData() {
-		ElementosDoStepEnterVehicleData.BotaoNext().click();
+		ElementosDaAbaEnterVehicleData.BotaoNext().click();
 	}
 
 	@Quando("preencho o formulario da aba enter Insurant Data")
@@ -29,7 +30,7 @@ public class EnviarFormularioSampleAppStep extends BaseTest {
 
 	@Quando("clico em Next do formulario enter Insurant Data")
 	public void ClicoEmNextDoFormularioEnterInsurantData() {
-		ElementosDoStepEnterInsurantData.BotaoNext().click();
+		ElementosDaAbaEnterInsurantData.BotaoNext().click();
 	}
 
 	@Quando("preencho o formulario da aba enter Product Data")
@@ -39,7 +40,7 @@ public class EnviarFormularioSampleAppStep extends BaseTest {
 
 	@Quando("clico em Next do formulario enter Product Data")
 	public void ClicoEmNextDoFormularioDaAbaEnterProductData() {
-		ElementosDoStepEnterProductData.BotaoNext().click();
+		ElementosDaAbaEnterProductData.BotaoNext().click();
 	}
 
 	@Quando("preencho o formulario da aba Select Price Option")
@@ -49,7 +50,7 @@ public class EnviarFormularioSampleAppStep extends BaseTest {
 
 	@Quando("clico em Next da aba Select Price Option")
 	public void ClicoEmNextDoFormularioDaAbaSelectPriceOption() {
-		ElementosDoStepSelectPriceOption.BotaoNext().click();
+		ElementosDaAbaSelectPriceOption.BotaoNext().click();
 	}
 
 	@Quando("preencho  o formulario da aba Send Quote")
@@ -59,72 +60,72 @@ public class EnviarFormularioSampleAppStep extends BaseTest {
 
 	@Quando("clico em Send da aba Select Send Quote")
 	public void ClicoEmSendDaAbaSelectSendQuote() {
-		ElementosDoStepSendQuote.BotaoSend().click();
+		ElementosDaAbaSendQuote.BotaoSend().click();
 	}
 
 	@Entao("e exibido a mensagem {string}")
 	public void EExibidoAMensagem(String Mensagem) {
-		Assert.assertEquals(ElementosDoStepSendQuote.TextoEscritoNoModalDeSucesso(), Mensagem);	
+		Assert.assertEquals(ElementosDaAbaSendQuote.TextoEscritoNoModalDeSucesso(), Mensagem);
 	}
-	
+
 	@Entao("Fecho o site")
 	public void FechoOSite() {
-	  FinalizarChromeDriverEAcessarWebSite();
+		FinalizarChromeDriverEAcessarWebSite();
 	}
-	
-    public void PreencherOFormularioDaAbaSendQuote() {
-		ElementosDoStepSendQuote.CampoEmail().sendKeys("qualidade@teste.com");
-		ElementosDoStepSendQuote.CampoPhone().sendKeys("11966009868");
-		ElementosDoStepSendQuote.CampoUsername().sendKeys("qualiteste");
-		ElementosDoStepSendQuote.CampoPassword().sendKeys("Qualidade@12");
-		ElementosDoStepSendQuote.CampoConfirmPassword().sendKeys("Qualidade@12");
-		ElementosDoStepSendQuote.CampoComments().sendKeys("Automacao de teste do formulario.");
+
+	public void PreencherOFormularioDaAbaSendQuote() {
+		ElementosDaAbaSendQuote.CampoEmail().sendKeys("qualidade@teste.com");
+		ElementosDaAbaSendQuote.CampoPhone().sendKeys("11966009868");
+		ElementosDaAbaSendQuote.CampoUsername().sendKeys("qualiteste");
+		ElementosDaAbaSendQuote.CampoPassword().sendKeys("Qualidade@12");
+		ElementosDaAbaSendQuote.CampoConfirmPassword().sendKeys("Qualidade@12");
+		ElementosDaAbaSendQuote.CampoComments().sendKeys("Automacao de teste do formulario.");
 	}
 
 	public void PreencherOFormularioDaAbaEnterProductData() {
-		ElementosDoStepEnterProductData.CampoStartDate().sendKeys("01/01/2022");
-		ElementosDoStepEnterProductData.ComboInsuranceSum().selectByVisibleText("3.000.000,00");
-		ElementosDoStepEnterProductData.ComboMeritRating().selectByVisibleText("Malus 16");
-		ElementosDoStepEnterProductData.ComboDamageInsurance().selectByVisibleText("No Coverage");
-		ElementosDoStepEnterProductData.CheckBoxOptionalProductsEuroProtection().click();
-		ElementosDoStepEnterProductData.ComboCourtesyCar().selectByVisibleText("No");
+		ElementosDaAbaEnterProductData.CampoStartDate().sendKeys("01/01/2022");
+		ElementosDaAbaEnterProductData.ComboInsuranceSum().selectByVisibleText("3.000.000,00");
+		ElementosDaAbaEnterProductData.ComboMeritRating().selectByVisibleText("Malus 16");
+		ElementosDaAbaEnterProductData.ComboDamageInsurance().selectByVisibleText("No Coverage");
+		ElementosDaAbaEnterProductData.CheckBoxOptionalProductsEuroProtection().click();
+		ElementosDaAbaEnterProductData.ComboCourtesyCar().selectByVisibleText("No");
 	}
 
 	public void PreencherOFormularioDaAbaEnterInsurantData() {
-		ElementosDoStepEnterInsurantData.BotaoStepEnterInsurantData().click();
-		ElementosDoStepEnterInsurantData.CampoFirstName().sendKeys("Qualidade");
-		ElementosDoStepEnterInsurantData.CampoLastName().sendKeys("Automacao");
-		ElementosDoStepEnterInsurantData.CampoDateOfBirth().sendKeys("12/03/2002");
-		ElementosDoStepEnterInsurantData.RadioButtonGenderMale().click();
-		ElementosDoStepEnterInsurantData.CampoStreetAddress().sendKeys("Rua de Qualidade");
-		ElementosDoStepEnterInsurantData.ComboCoutry().selectByVisibleText("Andorra");
-		ElementosDoStepEnterInsurantData.CampoZipCode().sendKeys("12321");
-		ElementosDoStepEnterInsurantData.CampoCity().sendKeys("QualiAuto");
-		ElementosDoStepEnterInsurantData.ComboOccupation().selectByVisibleText("Employee");
-		ElementosDoStepEnterInsurantData.SelecionarTodosCheckboxDeHobbies();
-		ElementosDoStepEnterInsurantData.CampoWebSite().sendKeys("http://sampleapp.tricentis.com/101/app.php");
+		ElementosDaAbaEnterInsurantData.BotaoStepEnterInsurantData().click();
+		ElementosDaAbaEnterInsurantData.CampoFirstName().sendKeys("Qualidade");
+		ElementosDaAbaEnterInsurantData.CampoLastName().sendKeys("Automacao");
+		ElementosDaAbaEnterInsurantData.CampoDateOfBirth().sendKeys("12/03/2002");
+		ElementosDaAbaEnterInsurantData.RadioButtonGenderMale().click();
+		ElementosDaAbaEnterInsurantData.CampoStreetAddress().sendKeys("Rua de Qualidade");
+		ElementosDaAbaEnterInsurantData.ComboCoutry().selectByVisibleText("Andorra");
+		ElementosDaAbaEnterInsurantData.CampoZipCode().sendKeys("12321");
+		ElementosDaAbaEnterInsurantData.CampoCity().sendKeys("QualiAuto");
+		ElementosDaAbaEnterInsurantData.ComboOccupation().selectByVisibleText("Employee");
+		ElementosDaAbaEnterInsurantData.SelecionarTodosCheckboxDeHobbies();
+		ElementosDaAbaEnterInsurantData.CampoWebSite().sendKeys("http://sampleapp.tricentis.com/101/app.php");
 	}
 
 	public void PreencherOFormularioDaAbaEnterVehicleData() {
-		ElementosDoStepEnterVehicleData.BotaoStepEnterVehicleData().click();
-		ElementosDoStepEnterVehicleData.ComboMake().selectByVisibleText("BMW");
-		ElementosDoStepEnterVehicleData.ComboModel().selectByVisibleText("Scooter");
-		ElementosDoStepEnterVehicleData.CampoCylinderCapacity().sendKeys("1893");
-		ElementosDoStepEnterVehicleData.CampoEnginePerformance().sendKeys("1895");
-		ElementosDoStepEnterVehicleData.CampoDateOfManufacture().sendKeys("03/05/1999");
-		ElementosDoStepEnterVehicleData.ComboNumberOfSeats().selectByVisibleText("5");
-		ElementosDoStepEnterVehicleData.CampoRightHandDriverOpcaoSim().click();
-		ElementosDoStepEnterVehicleData.ComboNumberOfSeatsMotorcycle().selectByVisibleText("2");
-		ElementosDoStepEnterVehicleData.ComboFuelType().selectByVisibleText("Diesel");
-		ElementosDoStepEnterVehicleData.CampoPayload().sendKeys("1000");
-		ElementosDoStepEnterVehicleData.CampoTotalWeight().sendKeys("1000");
-		ElementosDoStepEnterVehicleData.CampoListPrice().sendKeys("18900");
-		ElementosDoStepEnterVehicleData.CampoLicensePlateNumber().sendKeys("C2A34B");
-		ElementosDoStepEnterVehicleData.CampoAnnualMileage().sendKeys("250");
+		ElementosDaAbaEnterVehicleData.BotaoStepEnterVehicleData().click();
+		ElementosDaAbaEnterVehicleData.ComboMake().selectByVisibleText("BMW");
+		ElementosDaAbaEnterVehicleData.ComboModel().selectByVisibleText("Scooter");
+		ElementosDaAbaEnterVehicleData.CampoCylinderCapacity().sendKeys("1893");
+		ElementosDaAbaEnterVehicleData.CampoEnginePerformance().sendKeys("1895");
+		ElementosDaAbaEnterVehicleData.CampoDateOfManufacture().sendKeys("03/05/1999");
+		ElementosDaAbaEnterVehicleData.ComboNumberOfSeats().selectByVisibleText("5");
+		ElementosDaAbaEnterVehicleData.CampoRightHandDriverOpcaoSim().click();
+		ElementosDaAbaEnterVehicleData.ComboNumberOfSeatsMotorcycle().selectByVisibleText("2");
+		ElementosDaAbaEnterVehicleData.ComboFuelType().selectByVisibleText("Diesel");
+		ElementosDaAbaEnterVehicleData.CampoPayload().sendKeys("1000");
+		ElementosDaAbaEnterVehicleData.CampoTotalWeight().sendKeys("1000");
+		ElementosDaAbaEnterVehicleData.CampoListPrice().sendKeys("18900");
+		ElementosDaAbaEnterVehicleData.CampoLicensePlateNumber().sendKeys("C2A34B");
+		ElementosDaAbaEnterVehicleData.CampoAnnualMileage().sendKeys("250");
 	}
 
 	public void PreencherOFormularioDaAbaSelectPriceOption() {
-		ElementosDoStepSelectPriceOption.RadioButtonSilver().click();
+		ElementosDaAbaSelectPriceOption.RadioButtonSilver().click();
 	}
 
 }

@@ -16,7 +16,7 @@ public class PageObjectElementosDaAbaEnterProductData extends BasePage {
 		Esperar(ElementoCampoStartDate);
 		return GetDriver().findElement(ElementoCampoStartDate);
 	}
-	
+
 	public Select ComboInsuranceSum() {
 		Esperar(ElementoComboInsuranceSum);
 		return new Select(GetDriver().findElement(ElementoComboInsuranceSum));
@@ -26,22 +26,22 @@ public class PageObjectElementosDaAbaEnterProductData extends BasePage {
 		Esperar(ElementoComboMeritRating);
 		return new Select(GetDriver().findElement(ElementoComboMeritRating));
 	}
-	
+
 	public Select ComboDamageInsurance() {
 		Esperar(ElementoComboDamageInsurance);
 		return new Select(GetDriver().findElement(ElementoComboDamageInsurance));
 	}
-	
+
 	public WebElement CheckBoxOptionalProductsEuroProtection() {
 		Esperar(ElementoCheckBoxOptionalProductsEuroProtection);
 		return GetDriver().findElement(ElementoCheckBoxOptionalProductsEuroProtection);
 	}
-	
+
 	public Select ComboCourtesyCar() {
 		Esperar(ElementoComboCourtesyCar);
 		return new Select(GetDriver().findElement(ElementoComboCourtesyCar));
 	}
-	
+
 	public WebElement BotaoNext() {
 		Esperar(ElementoBotaoNext);
 		return GetDriver().findElement(ElementoBotaoNext);

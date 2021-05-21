@@ -1,11 +1,11 @@
 package Ferramentas;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.*;
 import org.openqa.selenium.JavascriptExecutor;
 
-
-public class BasePage extends DriverFactory{
+public class BasePage extends DriverFactory {
 
 	public WebDriverWait Wait;
 	public JavascriptExecutor Js = (JavascriptExecutor) DriverFactory.GetDriver();

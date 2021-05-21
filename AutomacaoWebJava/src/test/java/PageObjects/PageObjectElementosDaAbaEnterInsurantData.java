@@ -90,12 +90,6 @@ public class PageObjectElementosDaAbaEnterInsurantData extends BasePage {
 		}
 	}
 
-	// Asserts
-	public boolean EstaSendoExibidoOStepEnterProductData() {
-		Esperar(By.id("courtesycar"));
-		return GetDriver().findElement(By.id("courtesycar")).isEnabled();
-	}
-
 	// Elements By
 	By ElementoBotaoStepEnterInsurantData = By.id("enterinsurantdata");
 	By ElementoCampoFirstName = By.id("firstname");

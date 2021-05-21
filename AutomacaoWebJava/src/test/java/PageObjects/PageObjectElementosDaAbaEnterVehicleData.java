@@ -104,13 +104,6 @@ public class PageObjectElementosDaAbaEnterVehicleData extends BasePage {
 	}
 
 	
-	//Asserts
-	
-	public boolean EstaSendoExibidoOStepEnterInsurantData() {
-		Esperar(By.id("firstname"));
-		return GetDriver().findElement(By.id("firstname")).isEnabled();
-	}
-
 	
 	//Elements By
 	

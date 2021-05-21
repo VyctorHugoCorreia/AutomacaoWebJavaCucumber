@@ -9,14 +9,12 @@ public class BaseTest {
 	public WebDriver webdriver;
 
 	// PageObjects
-    public PageObjects.PageObjectElementosDaAbaEnterVehicleData ElementosDoStepEnterVehicleData = new PageObjects.PageObjectElementosDaAbaEnterVehicleData();
-    public PageObjects.PageObjectElementosDaAbaEnterInsurantData ElementosDoStepEnterInsurantData = new PageObjects.PageObjectElementosDaAbaEnterInsurantData();
-    public PageObjects.PageObjectElementosDaAbaEnterProductData ElementosDoStepEnterProductData = new PageObjects.PageObjectElementosDaAbaEnterProductData();
-    public PageObjects.PageObjectElementosDaAbaSelectPriceOption ElementosDoStepSelectPriceOption = new PageObjects.PageObjectElementosDaAbaSelectPriceOption();
-    public PageObjects.PageObjectElementosDaAbaSendQuote  ElementosDoStepSendQuote  = new PageObjects.PageObjectElementosDaAbaSendQuote();
-	
-    
-   
+	public PageObjects.PageObjectElementosDaAbaEnterVehicleData ElementosDaAbaEnterVehicleData = new PageObjects.PageObjectElementosDaAbaEnterVehicleData();
+	public PageObjects.PageObjectElementosDaAbaEnterInsurantData ElementosDaAbaEnterInsurantData = new PageObjects.PageObjectElementosDaAbaEnterInsurantData();
+	public PageObjects.PageObjectElementosDaAbaEnterProductData ElementosDaAbaEnterProductData = new PageObjects.PageObjectElementosDaAbaEnterProductData();
+	public PageObjects.PageObjectElementosDaAbaSelectPriceOption ElementosDaAbaSelectPriceOption = new PageObjects.PageObjectElementosDaAbaSelectPriceOption();
+	public PageObjects.PageObjectElementosDaAbaSendQuote ElementosDaAbaSendQuote = new PageObjects.PageObjectElementosDaAbaSendQuote();
+
 	public void IniciarChromeDriverEAcessarWebSite() {
 
 		url = "http://sampleapp.tricentis.com/101/app.php";
@@ -24,7 +22,6 @@ public class BaseTest {
 		webdriver.navigate().to(url);
 	}
 
-	
 	public void FinalizarChromeDriverEAcessarWebSite() {
 		webdriver.quit();
 		Ferramentas.DriverFactory.KillDriver();
