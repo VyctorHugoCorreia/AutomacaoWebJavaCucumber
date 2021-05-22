@@ -46,11 +46,16 @@ public class PageObjectElementosDaAbaEnterProductData extends BasePage {
 		Esperar(ElementoBotaoNext);
 		return GetDriver().findElement(ElementoBotaoNext);
 	}
-	// Asserts
+	
+	// Asserts || Texts || Methods
 
-	public boolean EstaSendoExibidoOStepSelectPriceOption() {
-		Esperar(By.id("selectsilver"));
-		return GetDriver().findElement(By.id("selectsilver")).isEnabled();
+	public void PreencherOFormularioDaAbaEnterProductData() {
+		CampoStartDate().sendKeys("01/01/2022");
+		ComboInsuranceSum().selectByVisibleText("3.000.000,00");
+		ComboMeritRating().selectByVisibleText("Malus 16");
+		ComboDamageInsurance().selectByVisibleText("No Coverage");
+		CheckBoxOptionalProductsEuroProtection().click();
+		ComboCourtesyCar().selectByVisibleText("No");
 	}
 
 	// Elements By

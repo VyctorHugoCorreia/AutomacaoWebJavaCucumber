@@ -1,9 +1,9 @@
 # language: pt
 
 
-Funcionalidade: Como usuario eu quero preencher os formularios do Automobile e  receber a mensagem de sucesso
+Funcionalidade: Como usuario eu quero preencher e enviar os formularios do Automobile entao receber a mensagem de sucesso
 
-Cenario: Preencher os formularios do Automobile e validar a mensagem de sucesso
+Cenario: Preencher e enviar os formularios do Automobile para entao validar a mensagem de sucesso
 Dado que estou no site Sample App
 Quando Preencho o formulario da aba enter Vehicle Data
 E clico em Next do formulario enter Vehicle Data
@@ -16,5 +16,3 @@ E clico em Next da aba Select Price Option
 E preencho  o formulario da aba Send Quote
 E clico em Send da aba Select Send Quote
 Entao e exibido a mensagem "Sending e-mail success!"
-
-

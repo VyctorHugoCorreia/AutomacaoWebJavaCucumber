@@ -84,10 +84,27 @@ public class PageObjectElementosDaAbaEnterInsurantData extends BasePage {
 		return GetDriver().findElement(ElementoBotaoNext);
 	}
 
+	// Asserts || Texts || Methods
+
 	public void SelecionarTodosCheckboxDeHobbies() {
 		for (int CheckBox = 1; CheckBox <= 5; CheckBox++) {
 			GetDriver().findElement(By.xpath("//label[" + CheckBox + "]/span[@class='ideal-check']")).click();
 		}
+	}
+
+	public void PreencherOFormularioDaAbaEnterInsurantData() {
+		BotaoStepEnterInsurantData().click();
+		CampoFirstName().sendKeys("Qualidade");
+		CampoLastName().sendKeys("Automacao");
+		CampoDateOfBirth().sendKeys("12/03/2002");
+		RadioButtonGenderMale().click();
+		CampoStreetAddress().sendKeys("Rua de Qualidade");
+		ComboCoutry().selectByVisibleText("Andorra");
+		CampoZipCode().sendKeys("12321");
+		CampoCity().sendKeys("QualiAuto");
+		ComboOccupation().selectByVisibleText("Employee");
+		SelecionarTodosCheckboxDeHobbies();
+		CampoWebSite().sendKeys("http://sampleapp.tricentis.com/101/app.php");
 	}
 
 	// Elements By

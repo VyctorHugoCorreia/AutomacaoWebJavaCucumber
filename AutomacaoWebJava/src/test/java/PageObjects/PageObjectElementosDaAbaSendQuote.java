@@ -48,11 +48,20 @@ public class PageObjectElementosDaAbaSendQuote extends BasePage {
 		return GetDriver().findElement(ElementoBotaoStepSendQuote);
 	}
 
-	// Asserts || Texts
+	// Asserts || Texts || Method
 
 	public String TextoEscritoNoModalDeSucesso() {
 		Esperar(By.xpath("//button[@class='confirm']"));
 		return GetDriver().findElement(ElementoTextoEscritoNoModalDeSucesso).getText();
+	}
+	
+	public void PreencherOFormularioDaAbaSendQuote() {
+		CampoEmail().sendKeys("qualidade@teste.com");
+		CampoPhone().sendKeys("11966009868");
+		CampoUsername().sendKeys("qualiteste");
+		CampoPassword().sendKeys("Qualidade@12");
+		CampoConfirmPassword().sendKeys("Qualidade@12");
+		CampoComments().sendKeys("Automacao de teste do formulario.");
 	}
 
 	// Elements By

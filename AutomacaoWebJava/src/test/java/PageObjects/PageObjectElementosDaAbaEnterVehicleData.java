@@ -103,7 +103,25 @@ public class PageObjectElementosDaAbaEnterVehicleData extends BasePage {
 		return new Select(GetDriver().findElement(ElementoCampoFuelType));
 	}
 
+	// Asserts || Texts || Method
 	
+	public void PreencherOFormularioDaAbaEnterVehicleData() {
+		BotaoStepEnterVehicleData().click();
+		ComboMake().selectByVisibleText("BMW");
+		ComboModel().selectByVisibleText("Scooter");
+		CampoCylinderCapacity().sendKeys("1893");
+		CampoEnginePerformance().sendKeys("1895");
+		CampoDateOfManufacture().sendKeys("03/05/1999");
+		ComboNumberOfSeats().selectByVisibleText("5");
+		CampoRightHandDriverOpcaoSim().click();
+	    ComboNumberOfSeatsMotorcycle().selectByVisibleText("2");
+		ComboFuelType().selectByVisibleText("Diesel");
+		CampoPayload().sendKeys("1000");
+		CampoTotalWeight().sendKeys("1000");
+		CampoListPrice().sendKeys("18900");
+		CampoLicensePlateNumber().sendKeys("C2A34B");
+		CampoAnnualMileage().sendKeys("250");
+	}
 	
 	//Elements By
 	

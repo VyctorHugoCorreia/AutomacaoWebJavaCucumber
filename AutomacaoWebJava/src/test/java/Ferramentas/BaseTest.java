@@ -1,8 +1,15 @@
 package Ferramentas;
 
-import org.junit.After;
-import org.junit.Before;
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class BaseTest {
 	public String url;
@@ -15,15 +22,26 @@ public class BaseTest {
 	public PageObjects.PageObjectElementosDaAbaSelectPriceOption ElementosDaAbaSelectPriceOption = new PageObjects.PageObjectElementosDaAbaSelectPriceOption();
 	public PageObjects.PageObjectElementosDaAbaSendQuote ElementosDaAbaSendQuote = new PageObjects.PageObjectElementosDaAbaSendQuote();
 
-	public void IniciarChromeDriverEAcessarWebSite() {
-
+	public void IniciarChrome() {
 		url = "http://sampleapp.tricentis.com/101/app.php";
 		webdriver = Ferramentas.DriverFactory.GetDriver();
 		webdriver.navigate().to(url);
 	}
 
-	public void FinalizarChromeDriver() {
+	public void FinalizarChrome() {
 		webdriver.quit();
 		Ferramentas.DriverFactory.KillDriver();
 	}
+
+	public void Screeshot(String Cenario) {
+		File file = ((TakesScreenshot) webdriver).getScreenshotAs(OutputType.FILE);
+
+		try {
+			FileUtils.copyFile(file, new File("target/Screenshot/" + Cenario + ".jpg"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
 }
