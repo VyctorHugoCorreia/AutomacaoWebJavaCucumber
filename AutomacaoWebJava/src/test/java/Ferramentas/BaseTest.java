@@ -22,7 +22,7 @@ public class BaseTest {
 		webdriver.navigate().to(url);
 	}
 
-	public void FinalizarChromeDriverEAcessarWebSite() {
+	public void FinalizarChromeDriver() {
 		webdriver.quit();
 		Ferramentas.DriverFactory.KillDriver();
 	}

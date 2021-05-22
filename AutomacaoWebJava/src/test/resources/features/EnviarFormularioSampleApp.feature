@@ -16,5 +16,5 @@ E clico em Next da aba Select Price Option
 E preencho  o formulario da aba Send Quote
 E clico em Send da aba Select Send Quote
 Entao e exibido a mensagem "Sending e-mail success!"
-Entao Fecho o site
+
 

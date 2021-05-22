@@ -66,13 +66,10 @@ public class EnviarFormularioSampleAppStep extends BaseTest {
 	@Entao("e exibido a mensagem {string}")
 	public void EExibidoAMensagem(String Mensagem) {
 		Assert.assertEquals(ElementosDaAbaSendQuote.TextoEscritoNoModalDeSucesso(), Mensagem);
+		FinalizarChromeDriver();
 	}
 
-	@Entao("Fecho o site")
-	public void FechoOSite() {
-		FinalizarChromeDriverEAcessarWebSite();
-	}
-
+	
 	public void PreencherOFormularioDaAbaSendQuote() {
 		ElementosDaAbaSendQuote.CampoEmail().sendKeys("qualidade@teste.com");
 		ElementosDaAbaSendQuote.CampoPhone().sendKeys("11966009868");
