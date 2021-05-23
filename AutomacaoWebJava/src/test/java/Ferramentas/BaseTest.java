@@ -34,6 +34,13 @@ public class BaseTest {
 	}
 
 	public void Screeshot(String Cenario) {
+		
+		File Pasta = new File("target/Screenshot");
+		
+		if(!Pasta.exists()) {
+			Pasta.mkdirs();
+		}
+			
 		File file = ((TakesScreenshot) webdriver).getScreenshotAs(OutputType.FILE);
 
 		try {
